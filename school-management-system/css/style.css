@@ -1,1 +1,545 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+}
 
+.login {
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #cbd5e1;
+}
+
+.login h1 {
+    text-align: center;
+    color: #0f172a;
+}
+
+.login h2 {
+    text-align: center;
+    color: #0f766e;
+}
+
+.login label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+.login button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background-color: #115e59;
+}
+
+.dashboard {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.dashboard h1 {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.dashboard h2 {
+    color: #0f172a;
+}
+
+.dashboard nav {
+    background-color: #0f766e;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.dashboard nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.dashboard nav a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    display: inline-block;
+    width: 20%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #cbd5e1;
+    text-align: center;
+}
+
+.card h3 {
+    color: #0f172a;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #0f766e;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+.teachers {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.teachers h1 {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.teachers h2 {
+    color: #0f172a;
+}
+
+.teachers nav {
+    background-color: #0f766e;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.teachers nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.teachers nav a:hover {
+    text-decoration: underline;
+}
+
+.teacher-top {
+    margin: 25px 0;
+}
+
+.teacher-top input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+.teacher-top button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.teacher-top button:hover {
+    background-color: #115e59;
+}
+
+.teachers table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 8px #cbd5e1;
+}
+
+.teachers th {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.teachers td {
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.teachers tr:hover {
+    background-color: #f1f5f9;
+}
+
+.attendance {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.attendance h1 {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.attendance h2 {
+    color: #0f172a;
+}
+
+.attendance nav {
+    background-color: #0f766e;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.attendance nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.attendance nav a:hover {
+    text-decoration: underline;
+}
+
+.attendance-top {
+    margin: 25px 0;
+}
+
+.attendance-top label {
+    margin-right: 10px;
+}
+
+.attendance-top input {
+    padding: 9px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+.attendance-top button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.attendance-top button:hover {
+    background-color: #115e59;
+}
+
+.attendance table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 8px #cbd5e1;
+}
+
+.attendance th {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.attendance td {
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.attendance tr:hover {
+    background-color: #f1f5f9;
+}
+
+.fees {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.fees h1 {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.fees h2 {
+    color: #0f172a;
+}
+
+.fees nav {
+    background-color: #0f766e;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.fees nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.fees nav a:hover {
+    text-decoration: underline;
+}
+
+.fee-top {
+    margin: 25px 0;
+}
+
+.fee-top input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+.fee-top button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fee-top button:hover {
+    background-color: #115e59;
+}
+
+.fees table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 8px #cbd5e1;
+}
+
+.fees th {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.fees td {
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.fees tr:hover {
+    background-color: #f1f5f9;
+}
+
+.results {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.results h1 {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.results h2 {
+    color: #0f172a;
+}
+
+.results nav {
+    background-color: #0f766e;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.results nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.results nav a:hover {
+    text-decoration: underline;
+}
+
+.result-top {
+    margin: 25px 0;
+}
+
+.result-top input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+.result-top button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result-top button:hover {
+    background-color: #115e59;
+}
+
+.results table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 8px #cbd5e1;
+}
+
+.results th {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.results td {
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.results tr:hover {
+    background-color: #f1f5f9;
+}
+
+.students {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.students h1 {
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 8px;
+}
+
+.students h2 {
+    color: #0f172a;
+}
+
+.students nav {
+    background-color: #0f766e;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.students nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.students nav a:hover {
+    text-decoration: underline;
+}
+
+.student-top {
+    margin: 25px 0;
+}
+
+.student-top input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+}
+
+.student-top button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.student-top button:hover {
+    background-color: #115e59;
+}
+
+.students table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 8px #cbd5e1;
+}
+
+.students th {
+    background-color: #0f172a;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.students td {
+    padding: 12px;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.students tr:hover {
+    background-color: #f1f5f9;
+}
+
+.students td button {
+    padding: 7px 12px;
+    margin-right: 5px;
+    background-color: #0f766e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.students td button:hover {
+    background-color: #115e59;
+}
