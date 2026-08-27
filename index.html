@@ -8,24 +8,40 @@
 </head>
 <body>
 
-    <div class="login">
-        <h1>School Management System</h1>
-        <h2>Login</h2>
+    <div class="login-page">
 
-        <form id="loginForm">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
+        <div class="login-brand">
+            <div class="brand-logo"></div>
+            <h1>School Management System</h1>
+            <p>Manage students, teachers, attendance, fees and results — all from one simple dashboard.</p>
+        </div>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password">
+        <div class="login-form-wrap">
+            <div class="login">
+                <h2>Welcome Back</h2>
+                <p class="login-sub">Login to your account to continue</p>
 
-            <button type="submit">Login</button>
-        </form>
+                <form id="loginForm">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+
+                    <div class="login-options">
+                        <label class="remember-me">
+                            <input type="checkbox">
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
     </div>
-
-    <footer class="footer">
-        <p>© 2026 School Management System</p>
-    </footer>
 
     <script src="js/script.js"></script>
 
