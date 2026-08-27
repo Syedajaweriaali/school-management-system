@@ -33,7 +33,6 @@ body {
 
 /* Logo - added using CSS only, before the school name, so HTML files don't need extra image tags */
 
-.login h1::before,
 .sidebar-brand h1::before {
     content: "";
     display: inline-block;
@@ -46,429 +45,10 @@ body {
     background-repeat: no-repeat;
 }
 
-
-/* ============================
-   Login Page
-   ============================ */
-
-.login {
-    width: 360px;
-    margin: 90px auto;
-    padding: 35px 30px;
-    background-color: var(--white);
-    border-radius: var(--radius);
-    border-left: 5px solid var(--primary);
-    box-shadow: var(--shadow-hover);
-    text-align: left;
-}
-
-.login h1 {
-    display: flex;
-    align-items: center;
-    color: var(--dark);
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.login h2 {
-    color: var(--primary);
-    font-weight: 600;
-    margin-top: 2px;
-    margin-bottom: 5px;
-}
-
-.login label {
-    display: block;
-    text-align: left;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.login input {
-    width: 100%;
-    padding: 10px 12px;
-    box-sizing: border-box;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-family: inherit;
-    outline: none;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
-}
-
-.login input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
-}
-
-.login button {
-    width: 100%;
-    margin-top: 22px;
-    padding: 11px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-family: inherit;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease, transform 0.1s ease;
-}
-
-.login button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-1px);
-}
-
-
-/* ============================
-   Sidebar Layout
-   (.layout wraps the sidebar + page content side by side,
-   used on every inner page instead of the old top navbar)
-   ============================ */
-
-.layout {
-    display: flex;
-    align-items: flex-start;
-    min-height: 100vh;
-}
-
-.sidebar {
-    width: 240px;
-    min-height: 100vh;
-    background: linear-gradient(180deg, var(--dark), #1f2937);
-    padding: 25px 18px;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-}
-
-.sidebar-brand {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sidebar-brand h1 {
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 0;
-}
-
-.sidebar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.sidebar nav a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 11px 14px;
-    border-radius: 7px;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.sidebar nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-}
-
-/* Logout kept visually separate from the nav links, pinned to the
-   bottom of the sidebar so it never gets mixed up with navigation */
-.logout-link {
-    margin-top: auto;
-    padding-top: 16px;
-    margin-top: auto;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    color: #fca5a5;
-    background-color: rgba(220, 38, 38, 0.12);
-    border: 1px solid rgba(220, 38, 38, 0.35);
-    border-radius: 7px;
-    padding: 10px 14px;
-    margin-top: 20px;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.logout-link:hover {
-    background-color: #dc2626;
-    color: white;
-}
-
-
-/* ============================
-   Page Content Area
-   (dashboard, students, teachers, attendance, fees, results
-   all sit inside .main-content, next to the sidebar)
-   ============================ */
-
-.main-content {
-    flex: 1;
-    padding: 35px 45px;
-}
-
-.dashboard, .students, .teachers, .attendance, .fees, .results {
-    width: 100%;
-}
-
-.dashboard h2, .students h2, .teachers h2, .attendance h2,
-.fees h2, .results h2 {
-    color: var(--dark);
-    margin-top: 0;
+.brand-logo {
+    width: 60px;
+    height: 60px;
     margin-bottom: 22px;
-    font-size: 22px;
-}
-
-
-/* ============================
-   Dashboard Cards
-   ============================ */
-
-.card {
-    display: inline-block;
-    width: 21%;
-    margin: 12px 10px 0 0;
-    padding: 22px;
-    background-color: var(--white);
-    border-radius: var(--radius);
-    border-left: 5px solid var(--primary);
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
-}
-
-.card h3 {
-    color: #64748b;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.card p {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--dark);
-    margin: 8px 0 0 0;
-}
-
-/* give each dashboard card its own accent color, in order */
-.card:nth-of-type(1) { border-left-color: var(--primary); }
-.card:nth-of-type(2) { border-left-color: var(--accent); }
-.card:nth-of-type(3) { border-left-color: #16a34a; }
-.card:nth-of-type(4) { border-left-color: #dc2626; }
-
-
-/* ============================
-   Search / Top Action Bars
-   (student-top, teacher-top, attendance-top, fee-top, result-top)
-   ============================ */
-
-.student-top, .teacher-top, .attendance-top, .fee-top, .result-top {
-    margin: 22px 0;
-}
-
-.student-top input, .teacher-top input, .attendance-top input,
-.fee-top input, .result-top input {
-    width: 280px;
-    padding: 10px 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    font-family: inherit;
-    outline: none;
-}
-
-.student-top input:focus, .teacher-top input:focus, .attendance-top input:focus,
-.fee-top input:focus, .result-top input:focus {
-    border-color: var(--primary);
-}
-
-.attendance-top label {
-    margin-right: 10px;
-    font-weight: 500;
-}
-
-.student-top button, .teacher-top button, .attendance-top button,
-.fee-top button, .result-top button {
-    padding: 10px 20px;
-    margin-left: 10px;
-    background-color: var(--accent);
-    color: var(--dark);
-    border: none;
-    border-radius: 6px;
-    font-family: inherit;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.student-top button:hover, .teacher-top button:hover, .attendance-top button:hover,
-.fee-top button:hover, .result-top button:hover {
-    background-color: #d97706;
-}
-
-
-/* ============================
-   Tables (students, teachers, attendance, fees, results)
-   ============================ */
-
-.students table, .teachers table, .attendance table,
-.fees table, .results table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--white);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-}
-
-.students th, .teachers th, .attendance th, .fees th, .results th {
-    background-color: var(--dark);
-    color: white;
-    padding: 13px 12px;
-    text-align: left;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.students td, .teachers td, .attendance td, .fees td, .results td {
-    padding: 12px;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-}
-
-.students tr:hover, .teachers tr:hover, .attendance tr:hover,
-.fees tr:hover, .results tr:hover {
-    background-color: #f8fafc;
-}
-
-/* Action buttons inside student table (Edit / Delete) */
-.students td button {
-    padding: 6px 12px;
-    margin-right: 5px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.students td button:hover {
-    background-color: var(--primary-dark);
-}
-
-.students td button:last-child {
-    background-color: #dc2626;
-}
-
-.students td button:last-child:hover {
-    background-color: #b91c1c;
-}
-
-
-/* ============================
-   Footer
-   ============================ */
-
-.footer {
-    margin-top: 40px;
-    padding: 18px;
-    background-color: var(--dark);
-    color: #cbd5e1;
-    text-align: center;
-    font-size: 13px;
-}
-
-
-/* ============================
-   Small screens
-   ============================ */
-
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        min-height: auto;
-        position: static;
-    }
-
-    .sidebar nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .main-content {
-        padding: 25px 20px;
-    }
-}/* ============================================
-   School Management System - Stylesheet
-   ============================================ */
-
-/* Google Font (Poppins) - clean modern font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* Color Variables - easy to change theme from one place */
-:root {
-    --primary: #4f46e5;
-    --primary-dark: #3730a3;
-    --accent: #f59e0b;
-    --dark: #111827;
-    --light-bg: #f3f4f6;
-    --white: #ffffff;
-    --border: #e5e7eb;
-    --radius: 10px;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    --shadow-hover: 0 8px 22px rgba(0, 0, 0, 0.15);
-}
-
-
-/* Basic Settings */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    background-color: var(--light-bg);
-    color: #334155;
-}
-
-
-/* Logo - added using CSS only, before the school name, so HTML files don't need extra image tags */
-
-.login h1::before,
-.sidebar-brand h1::before {
-    content: "";
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    flex-shrink: 0;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23f59e0b'/%3E%3Cpath d='M32 14 L54 24 L32 34 L10 24 Z' fill='white'/%3E%3Cpath d='M20 28 V40 C20 44 26 48 32 48 C38 48 44 44 44 40 V28 L32 34 Z' fill='white' opacity='0.9'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
@@ -477,31 +57,67 @@ body {
 
 /* ============================
    Login Page
+   (split screen: left = school branding, right = login form)
    ============================ */
 
+.login-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.login-brand {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 60px;
+}
+
+.login-brand h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+}
+
+.login-brand p {
+    max-width: 380px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+}
+
+.login-form-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-bg);
+    padding: 40px;
+}
+
 .login {
-    width: 360px;
-    margin: 90px auto;
+    width: 100%;
+    max-width: 360px;
     padding: 35px 30px;
     background-color: var(--white);
     border-radius: var(--radius);
-    border-left: 5px solid var(--primary);
     box-shadow: var(--shadow-hover);
     text-align: left;
 }
 
-.login h1 {
-    display: flex;
-    align-items: center;
+.login h2 {
     color: var(--dark);
-    font-size: 20px;
     font-weight: 700;
+    font-size: 22px;
+    margin: 0;
 }
 
-.login h2 {
-    color: var(--primary);
-    font-weight: 600;
-    margin-top: 2px;
+.login-sub {
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 6px;
     margin-bottom: 5px;
 }
 
@@ -530,6 +146,41 @@ body {
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #475569;
+    margin: 0;
+}
+
+.remember-me input {
+    width: auto;
+    padding: 0;
+    border: none;
+    accent-color: var(--primary);
+}
+
+.forgot-link {
+    font-size: 13px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
 .login button {
     width: 100%;
     margin-top: 22px;
@@ -547,6 +198,12 @@ body {
 .login button:hover {
     background-color: var(--primary-dark);
     transform: translateY(-1px);
+}
+
+@media (max-width: 800px) {
+    .login-brand {
+        display: none;
+    }
 }
 
 
