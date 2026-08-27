@@ -1,5 +1,3 @@
-// Login Form
-
 let loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -25,8 +23,6 @@ if (loginForm) {
     });
 
 }
-
-// Login Form
 
 let form = document.querySelector("form");
 
@@ -54,9 +50,6 @@ if (form) {
 
 }
 
-
-// Search Student
-
 let searchStudent = document.getElementById("searchStudent");
 
 if (searchStudent) {
@@ -82,9 +75,6 @@ if (searchStudent) {
     });
 
 }
-
-
-// Add Student
 
 let addStudent = document.getElementById("addStudent");
 
@@ -126,9 +116,6 @@ if (addStudent) {
 
 }
 
-
-// Delete Student
-
 function deleteStudent(button) {
 
     let row = button.parentElement.parentElement;
@@ -141,9 +128,6 @@ function deleteStudent(button) {
     }
 
 }
-
-
-// Edit Student
 
 function editStudent(button) {
 
